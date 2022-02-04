@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<a
+			id="ar-link"
+			rel="ar"
+			href="https://www.vectary.com/viewer/data/8756e1df-c295-414d-99a0-d6ed2517758a/usdz/8756e1df-c295-414d-99a0-d6ed2517758a.usdz#custom=https://i-reporter.jp&customHeight=small"
+		>
+			<img src="https://www2.panasonic.biz/ls/densetsu/haisen/switch_concent/smartwr/img/bousui/WK4602SK.jpg" />
+		</a>
+		<script>
+			const linkElement = document.getElementById("ar-link");
+			linkElement.addEventListener(
+				"message",
+				function (event) {
+					window.location.href = "jp.co.cimtops.ireporter://open";
+					if (event.data == "_apple_ar_quicklook_button_tapped") {
+						alert("i-Reporterで開けます！");
+					}
+				},
+				false
+			);
+		</script>
+	</body>
+</html>
